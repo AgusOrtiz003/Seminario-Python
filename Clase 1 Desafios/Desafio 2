@@ -1,0 +1,6 @@
+# Queremos ingresar un número desde el teclado e imprimir si es múltiplo de 2, 3 o 5.
+num = int(input("Ingrese un número"))
+if ((num % 2 == 0) or (num % 3 == 0 ) or (num % 5 ==0 )):
+    print("Tu numero es multiplo de 2, 3 o 5")
+else:
+    print("Tu numero no es multiplo ni de 2, ni de 3, ni de 5")
