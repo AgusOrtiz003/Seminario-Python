@@ -1,0 +1,3 @@
+# Escribir un programa que ingrese desde teclado una cadena de caracteres e imprima cuántas letras "a" contiene.
+cadena= input("Ingrese una cadena: ")
+print(cadena.lower().count("a"))
