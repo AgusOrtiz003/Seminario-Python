@@ -1,0 +1,7 @@
+#Dadas dos cadenas ingresadas desde el teclado, imprimir aquella que tenga más caracteres.
+cadena1= input("Ingrese una cadena \n")
+cadena2= input("Ingrese otra cadena \n")
+if(len(cadena1)>len(cadena2)):
+    print({cadena1})
+else:
+    print(cadena2)
