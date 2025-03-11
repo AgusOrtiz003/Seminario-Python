@@ -1,0 +1,6 @@
+# Determinar si una palabra ingresada desde el teclado es un sustantivo propio o no (solo vamos a controlar si la palabra empieza con una letra mayúscula).
+cadena = input("Ingrese algo: ")
+if ((cadena[0]>="A") and (cadena[0]<="Z")):
+    print("La cadena ingresada es un sustantivo propio")
+else:
+    print("La cadena ingresada no es un sustantivo propio")
