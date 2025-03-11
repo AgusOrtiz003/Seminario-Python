@@ -1,0 +1,6 @@
+# Dado un caracter ingresado por el teclado, queremos saber si es una comilla o no.
+char = input("Ingrese un caracter \n")
+if(char == "'" ) or (char == '"'):
+    print("Ingresaste una comilla")
+else:
+    print("No ingresaste una comilla")
