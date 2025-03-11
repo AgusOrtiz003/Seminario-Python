@@ -1,0 +1,8 @@
+#Dado una letra ingresada por el teclado, queremos saber si es mayúscula o minúscula.
+char = input("Ingrese una letra \n")
+if(char>='a' and char<='z'):
+    print("La letra ingresada es minúscula")
+elif (char>='A' and char<='Z'):
+    print("La letra ingresada es mayúscula")
+else:
+    print("No ingresaste una letra")
