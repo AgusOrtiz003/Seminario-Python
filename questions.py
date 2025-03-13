@@ -16,6 +16,7 @@ answers = [
  ("=", "==", "!=", "==="),
  ]
 exit_status=0
+puntaje=0
  # Índice de la respuesta correcta para cada pregunta, el el mismo orden que las preguntas
 correct_answers_index = [1, 2, 0, 3, 1]
 6. 
@@ -41,9 +42,11 @@ for _ in range(3):
             break
         elif int(user_answer)-1 == correct_answers_index[question_index]:
             print("¡Correcto!")
+            puntaje+=1
             break
         elif intento==0:
             print("Incorrecto, te queda 1 intento")
+            puntaje+=-0.5
             continue
         else:
             # Si el usuario no responde correctamente después de 2 intentos,
@@ -57,4 +60,5 @@ for _ in range(3):
         continue
     else:
         print(f"exit status= {exit_status}")
-        break  
+        break
+print(f"Hiciste {puntaje} puntos")
