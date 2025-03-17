@@ -1,0 +1,49 @@
+#Queremos ingresar un número desde el teclado e imprimir si es par.
+
+num = int(input("Ingrese un número"))
+if num % 2 == 0:
+    print("El numero ingresado es par")
+else: 
+    print("El numero ingresado no es par")
+
+# Queremos ingresar un número desde el teclado e imprimir si es múltiplo de 2, 3 o 5.
+num = int(input("Ingrese un número"))
+if ((num % 2 == 0) or (num % 3 == 0 ) or (num % 5 ==0 )):
+    print("Tu numero es multiplo de 2, 3 o 5")
+else:
+    print("Tu numero no es multiplo ni de 2, ni de 3, ni de 5")
+
+#Dado una letra ingresada por el teclado, queremos saber si es mayúscula o minúscula.
+char = input("Ingrese una letra \n")
+if(char>='a' and char<='z'):
+    print("La letra ingresada es minúscula")
+elif (char>='A' and char<='Z'):
+    print("La letra ingresada es mayúscula")
+else:
+    print("No ingresaste una letra")
+
+# Dado un caracter ingresado por el teclado, queremos saber si es una comilla o no.
+char = input("Ingrese un caracter \n")
+if(char == "'" ) or (char == '"'):
+    print("Ingresaste una comilla")
+else:
+    print("No ingresaste una comilla")
+
+#Dadas dos cadenas ingresadas desde el teclado, imprimir aquella que tenga más caracteres.
+cadena1= input("Ingrese una cadena \n")
+cadena2= input("Ingrese otra cadena \n")
+if(len(cadena1)>len(cadena2)):
+    print({cadena1})
+else:
+    print(cadena2)
+
+# Determinar si una palabra ingresada desde el teclado es un sustantivo propio o no (solo vamos a controlar si la palabra empieza con una letra mayúscula).
+cadena = input("Ingrese algo: ")
+if ((cadena[0]>="A") and (cadena[0]<="Z")):
+    print("La cadena ingresada es un sustantivo propio")
+else:
+    print("La cadena ingresada no es un sustantivo propio")
+
+# Escribir un programa que ingrese desde teclado una cadena de caracteres e imprima cuántas letras "a" contiene.
+cadena= input("Ingrese una cadena: ")
+print(cadena.lower().count("a"))
