@@ -16,6 +16,7 @@ answers = [
  ("=", "==", "!=", "==="),
  ]
 exit_status=0
+puntaje=0
  # Índice de la respuesta correcta para cada pregunta, el el mismo orden que las preguntas
 correct_answers_index = [1, 2, 0, 3, 1]
 6. 
@@ -33,12 +34,21 @@ for _ in range(3):
         print(f"{i + 1}. {answer}")
     # El usuario tiene 2 intentos para responder correctamente
     for intento in range(2):
-        user_answer = int(input("Respuesta: "))-1
+        user_answer = input("Respuesta: ")
         # Se verifica si la respuesta es correcta
-        if user_answer == correct_answers_index[question_index]:
-            print("¡Correcto!")
+        if (user_answer.isdigit()==False or ((int(user_answer)-1)<0 or (int(user_answer)-1)>3)):
+            print("Respuesta no válida")
+            exit_status=1
             break
-        elif (user_answer>=0 and user_answer<=3):
+        elif int(user_answer)-1 == correct_answers_index[question_index]:
+            print("¡Correcto!")
+            puntaje+=1
+            break
+        elif intento==0:
+            print("Incorrecto, te queda 1 intento")
+            puntaje+=-0.5
+            continue
+        else:
             # Si el usuario no responde correctamente después de 2 intentos,
             # se muestra la respuesta correcta
             print("Incorrecto. La respuesta correcta es:")
@@ -46,12 +56,9 @@ for _ in range(3):
             [correct_answers_index[question_index]])
             # Se imprime un blanco al final de la pregunta
             print()
-        else:
-            print("Respuesta no válida")
-            exit_status=1
-            break
     if exit_status==0:
         continue
     else:
         print(f"exit status= {exit_status}")
-        break            
+        break
+print(f"Hiciste {puntaje} puntos")
