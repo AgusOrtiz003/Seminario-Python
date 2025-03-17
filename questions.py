@@ -25,7 +25,7 @@ correct_answers_index = [1, 2, 0, 3, 1]
 2. 
 3.
 # Se seleccionan las preguntas y las respuestas aleatoriamente
-questions_to_ask = random.choices(list(zip(questions, answers, correct_answers_index)), k=3)
+questions_to_ask = random.sample(list(zip(questions, answers, correct_answers_index)), k=3)
 I=0
 for _ in range(3):
     # Se muestra la pregunta y las respuestas posibles
@@ -60,6 +60,6 @@ for _ in range(3):
     if exit_status==0:
         continue
     else:
-        print(f"exit status= {exit_status}")
+        print(f"exit status = {exit_status}")
         break
 print(f"Hiciste {puntaje} puntos")
