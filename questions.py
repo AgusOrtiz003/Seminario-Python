@@ -26,7 +26,6 @@ correct_answers_index = [1, 2, 0, 3, 1]
 3.
 # Se seleccionan las preguntas y las respuestas aleatoriamente
 questions_to_ask = random.sample(list(zip(questions, answers, correct_answers_index)), k=3)
-I=0
 for _ in range(3):
     # Se muestra la pregunta y las respuestas posibles
     question=questions_to_ask[_]
