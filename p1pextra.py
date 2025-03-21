@@ -11,12 +11,12 @@ while(opcion!=0):
                 if (nom not in productos):
                      productos[nom]=int(input("Ingrese la cantidad inicial del producto: "))
                 else:
-                     println("Error: El producto ya existe")
+                     print("Error: El producto ya existe")
         case 2:
                 nom=input("Ingrese el nombre del producto a eliminar: ")
                 if (nom in productos):
                       del productos[nom]
-                else: println("Error: El producto no existe")
+                else: print("Error: El producto no existe")
         case 3:
                 for key in productos:
                       print(f"|Producto: {key} | Cantidad: {productos[key]}|")
